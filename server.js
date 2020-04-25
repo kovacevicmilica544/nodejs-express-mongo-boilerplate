@@ -2,7 +2,14 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const jwt = require('express-jwt');
-require('dotenv').config()
+
+const path = require('path');
+const envPath = path.resolve(process.cwd(), 'src', '.env');
+require('dotenv').config({
+  path: envPath,
+});
+
+const {errorHandlerMiddleware, setCORS} = require('./src/util/middleware');
 
 const authRoutes = require('./src/controllers/AuthController');
 const userRouter = require('./src/controllers/UserController');
@@ -10,7 +17,7 @@ const userRouter = require('./src/controllers/UserController');
 const app = express();
 const defaultPort = 3000;
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PW}@cluster0-yshbv.mongodb.net/boilerplate?retryWrites=true&w=majority`,{
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PW}@cluster0-yshbv.mongodb.net/test?retryWrites=true&w=majority`,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -34,21 +41,11 @@ app.use(jwt({secret: process.env.JWT_SECRET})
     ]
 }));
 
-// Set CORS
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, PATCH, PUT, DELETE, OPTIONS"
-    );
-    next()
-});
+app.use(setCORS);
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRouter);
+
+app.use(errorHandlerMiddleware);
 
 app.listen(process.env.PORT || defaultPort, () => console.log(`App listening on port ${process.env.PORT || defaultPort}`));
