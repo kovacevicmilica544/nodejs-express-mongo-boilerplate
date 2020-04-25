@@ -7,4 +7,10 @@ const userSchema = mongoose.Schema({
   lastName: { type: String, required: true }
 }, {timestamps: true});
 
+userSchema.set('toJSON', {
+  virtuals: true,
+  versionKey: false,
+  transform: function (doc, ret) {   delete ret._id  }
+});
+
 module.exports = mongoose.model("User", userSchema);
