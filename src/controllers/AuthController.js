@@ -11,7 +11,7 @@ router.post('/sign-up',
     validate(userValidators.registerValidator),
     (req, res, next) => {
         userService.createUser(req.body)
-        .then(data => res.status(201).json(lodash.omit(data.toObject(), ['password', '_id', '__v'])))
+        .then(data => res.status(201).json(data))
         .catch(err => next(err));
 })
 
