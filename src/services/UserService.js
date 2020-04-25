@@ -17,13 +17,13 @@ const auhenticateUser = async(data) => {
     const user = await getUserByEmail(data.email);
 
     if (!user)
-        return Promise.reject(`Could not find user with e-mail ${data.email}!`);
+        return Promise.reject(new Error(`Could not find user with e-mail ${data.email}!`));
     if (!bcrypt.compareSync(data.password, user.password))
-        return Promise.reject(`Password is not valid!`)
+        return Promise.reject(new Error(`Password is not valid!`))
 
     const token = createToken(user);
     return Promise.resolve({
-        user: lodash.omit(user.toObject(), ['password', '__v']),
+        user: user,
         token: token
     });
 }
