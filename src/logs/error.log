@@ -9,3 +9,20 @@
 12-05-2020 19:01:05 [error] POST - /api/auth/sign-in | Please verify your account first!  | Error: Please verify your account first!
     at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:15:47)
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 19:11:48 [error] GET - /user/123 | No authorization token was found  | UnauthorizedError: No authorization token was found
+    at middleware (E:\nodejs boilerplate\node_modules\express-jwt\lib\index.js:76:21)
+    at E:\nodejs boilerplate\node_modules\express-unless\index.js:47:5
+    at Layer.handle [as handle_request] (E:\nodejs boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:317:13)
+    at E:\nodejs boilerplate\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:275:10)
+    at urlencodedParser (E:\nodejs boilerplate\node_modules\body-parser\lib\types\urlencoded.js:91:7)
+    at Layer.handle [as handle_request] (E:\nodejs boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:317:13)
+    at E:\nodejs boilerplate\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:335:12)
+    at next (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:275:10)
+    at jsonParser (E:\nodejs boilerplate\node_modules\body-parser\lib\types\json.js:110:7)
+    at Layer.handle [as handle_request] (E:\nodejs boilerplate\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (E:\nodejs boilerplate\node_modules\express\lib\router\index.js:317:13)

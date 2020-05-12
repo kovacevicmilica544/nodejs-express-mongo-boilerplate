@@ -10,6 +10,8 @@ const router = express.Router();
  *     tags:
  *       - User
  *     description: Returns a single user
+ *     security:
+ *       - bearerAuth: []
  *     produces:
  *       - application/json
  *     parameters:

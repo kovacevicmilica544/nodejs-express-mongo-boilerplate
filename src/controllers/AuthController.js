@@ -14,6 +14,8 @@ const router = express.Router();
  *     tags:
  *       - Auth
  *     description: Creates a new user
+ *     consumes:
+ *       - application/json
  *     produces:
  *       - application/json
  *     parameters:
@@ -65,6 +67,8 @@ router.post('/sign-up',
  *     tags:
  *       - Auth
  *     description: Sign in
+ *     consumes:
+ *       - application/json
  *     produces:
  *       - application/json
  *     parameters:
