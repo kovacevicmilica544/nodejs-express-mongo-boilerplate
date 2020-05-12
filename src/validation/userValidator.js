@@ -1,10 +1,11 @@
 const { Joi } = require('express-validation')
+const {emailRegex} =  require('../constants/validationRegexes');
 
 const registerValidator = {
     body: Joi.object({
         email: Joi.string()
             .required()
-            .regex(new RegExp('^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$')),
+            .regex(emailRegex),
         password: Joi.string()
             .required()
             .min(4)
@@ -25,7 +26,7 @@ const loginValidator = {
     body: Joi.object({
         email: Joi.string()
             .required()
-            .regex(new RegExp('^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$')),
+            .regex(emailRegex),
         password: Joi.string()
             .required()
             .min(4)

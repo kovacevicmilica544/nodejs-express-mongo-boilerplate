@@ -1,0 +1,42 @@
+12-05-2020 18:58:24 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 20.577 ms
+
+12-05-2020 18:58:25 [error] POST - /api/auth/sign-in | Could not find user with e-mail milica@milcia.com!  | Error: Could not find user with e-mail milica@milcia.com!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:10:38)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 18:58:25 [info] POST - /api/auth/sign-in | Status 404 | Response Time 1305.668 ms
+
+12-05-2020 18:59:09 [info] OPTIONS - /api/auth/sign-up | Status 200 | Response Time 0.381 ms
+
+12-05-2020 18:59:10 [info] POST - /api/auth/sign-up | Status 201 | Response Time 310.466 ms
+
+12-05-2020 18:59:18 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 0.277 ms
+
+12-05-2020 18:59:18 [error] POST - /api/auth/sign-in | Password is not valid!  | Error: Password is not valid!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:13:31)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 18:59:18 [info] POST - /api/auth/sign-in | Status 404 | Response Time 213.938 ms
+
+12-05-2020 18:59:40 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 0.480 ms
+
+12-05-2020 18:59:40 [error] POST - /api/auth/sign-in | "email" with value "milica" fails to match the required pattern: /^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$/ 
+12-05-2020 18:59:40 [info] POST - /api/auth/sign-in | Status 400 | Response Time 3.078 ms
+
+12-05-2020 18:59:45 [error] POST - /api/auth/sign-in | "email" with value "milica" fails to match the required pattern: /^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$/ 
+12-05-2020 18:59:45 [info] POST - /api/auth/sign-in | Status 400 | Response Time 2.279 ms
+
+12-05-2020 19:00:06 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 0.293 ms
+
+12-05-2020 19:00:06 [error] POST - /api/auth/sign-in | password should have a minimum length of 4 
+12-05-2020 19:00:06 [info] POST - /api/auth/sign-in | Status 400 | Response Time 1.667 ms
+
+12-05-2020 19:01:05 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 4.368 ms
+
+12-05-2020 19:01:05 [error] POST - /api/auth/sign-in | Please verify your account first!  | Error: Please verify your account first!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:15:47)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 19:01:05 [info] POST - /api/auth/sign-in | Status 400 | Response Time 260.438 ms
+
+12-05-2020 19:01:43 [info] OPTIONS - /api/auth/sign-in | Status 200 | Response Time 3.463 ms
+
+12-05-2020 19:01:43 [info] POST - /api/auth/sign-in | Status 200 | Response Time 707.340 ms
+

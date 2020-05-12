@@ -1,0 +1,11 @@
+12-05-2020 18:58:25 [error] POST - /api/auth/sign-in | Could not find user with e-mail milica@milcia.com!  | Error: Could not find user with e-mail milica@milcia.com!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:10:38)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 18:59:18 [error] POST - /api/auth/sign-in | Password is not valid!  | Error: Password is not valid!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:13:31)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+12-05-2020 18:59:45 [error] POST - /api/auth/sign-in | "email" with value "milica" fails to match the required pattern: /^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}$/ 
+12-05-2020 19:00:06 [error] POST - /api/auth/sign-in | password should have a minimum length of 4 
+12-05-2020 19:01:05 [error] POST - /api/auth/sign-in | Please verify your account first!  | Error: Please verify your account first!
+    at Object.auhenticateUser (E:\nodejs boilerplate\src\services\AuthService.js:15:47)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
