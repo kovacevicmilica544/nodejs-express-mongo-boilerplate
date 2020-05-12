@@ -44,8 +44,7 @@ app.use(jwt({secret: JWT_SECRET})
 .unless({
     path: [
       '/api/auth/sign-in',
-      '/api/auth/sign-up',
-      '/api/docs'
+      '/api/auth/sign-up'
     ]
 }));
 

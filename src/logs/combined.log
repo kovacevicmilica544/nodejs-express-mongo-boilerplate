@@ -40,3 +40,13 @@
 
 12-05-2020 19:01:43 [info] POST - /api/auth/sign-in | Status 200 | Response Time 707.340 ms
 
+12-05-2020 19:24:49 [info] GET - /api-docs/ | Status 304 | Response Time 8.105 ms
+
+12-05-2020 19:24:49 [info] GET - /api-docs/swagger-ui.css | Status 304 | Response Time 1.684 ms
+
+12-05-2020 19:24:49 [info] GET - /api-docs/swagger-ui-init.js | Status 200 | Response Time 0.574 ms
+
+12-05-2020 19:24:49 [info] GET - /api-docs/swagger-ui-bundle.js | Status 304 | Response Time 4.103 ms
+
+12-05-2020 19:24:49 [info] GET - /api-docs/swagger-ui-standalone-preset.js | Status 304 | Response Time 4.250 ms
+
